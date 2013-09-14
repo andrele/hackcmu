@@ -17,52 +17,95 @@
 	    <![endif]-->
 	</head> 
 	<body>
-	    <div class="navbar-wrapper">
-	      <div class="container">
-
-	        <div class="navbar navbar-inverse navbar-static-top">
-	          <div class="container">
-	            <div class="navbar-header">
-	              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	                <span class="icon-bar"></span>
-	              </button>
-	              <a class="navbar-brand" href="#">Posture</a>
-	            </div>
-	            <div class="navbar-collapse collapse">
-	              <ul class="nav navbar-nav">
-	                <li class="active"><a href="#">News</a></li>
-	                <li><a href="#about">About</a></li>
-	                <li><a href="#contact">Contact</a></li>
-	                <li class="dropdown">
-	                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-	                  <ul class="dropdown-menu">
-	                    <li><a href="#">Action</a></li>
-	                    <li><a href="#">Another action</a></li>
-	                    <li><a href="#">Something else here</a></li>
-	                    <li class="divider"></li>
-	                    <li class="dropdown-header">Nav header</li>
-	                    <li><a href="#">Separated link</a></li>
-	                    <li><a href="#">One more separated link</a></li>
-	                  </ul>
-	                </li>
-	              </ul>
-	            </div>
-	          </div>
-	        </div>
-
-	      </div>
-	    </div> <!-- end navbar-wrapper -->
-
-	    <!-- Begin main content -->
-	    <div class="heroArticle">
-	    	<video width="100%" height="600px" src="content/video/yahoo.mp4" controls></video>
-	    	<h1>9 major logo redesigns: Yahoo and beyond</h1>
-	    	<p>
-	    		Yahoo revealed its new logo at the conclusion of its 30 Days of Change campaign, which offered a new logo each day during the month of August. The new logo is meant to be “a modern redesign that’s more reflective of [Yahoo’s] reimagined design and new experiences.”
-	    	</p>
-	    </div>
+    
+    <!--Outer container -->
+    <div id="container">
+    	
+        <!--nav bar -->
+        <!--Browse/Detail view-->
+        <div id="nav">
+        </div>
+        
+        
+        <!-- Article -->
+        <article>
+       
+        <!-- Browse view: heading video
+        	 Detail view: heading longText-->
+        	<div id="articleMain">
+            
+	       		<!--Main heading - headline + author info + date -->
+    	    	<!--Full/Browse/Detail view:  -->
+	    	    <div id="heading">
+    	    		<h1 id="headline">Heading</h1>
+	        	    <img id="authorThumb" src=""/>
+    	        	<h2 id="author">Author name</h2>
+  					<h3 id="date">12/12/2013</h3>  
+	 	       </div>
+            
+	        	<!--Video-->
+		        <!--Full/Browse view-->
+        	    <div id="video">
+    	    		<video src="">
+        	    	</video>
+        		</div>
+        
+	            <!--Main body text-->
+    	        <!--Detail View -->
+        	    <div id="longText">
+            	</div>
+            
+            
+            </div>  <!--end article main --> 
+            
+            
+            
+            <!--Short text -->
+        	<!--Browse view -->
+            <div id="shortText">
+        	</div>
+            
+            
+            <!--Right column - images -->
+            <!--Detail view-->
+            <div id="rightColumn">
+            </div>
+            
+        
+        </article>
+        
+        
+        
+        <!-- container for previous and next video buttons -->
+        <!--Browse view-->
+        <div id="prevNext">
+        
+        	<!--Previous button -->
+        	<div id="previous">
+            	<img id="prevThumb" />
+               	<div id="prevText" />
+                </div>
+                <div id="prevArrow">
+                </div>
+            </div>
+            
+            
+            <!--Next button -->
+            <div id="next">
+            	<img id="nextThumb" />
+               	<div id="nextText" />
+                </div>
+                <div id="nextArrow">
+                </div>
+            </div>    
+            
+        </div>
+        <!--end prevNext-->
+                    
+        </div>
+        
+               
+        
 
 
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
