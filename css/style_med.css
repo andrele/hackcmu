@@ -1,0 +1,12 @@
+/* GLOBAL STYLES */
+
+body {
+	padding-bottom: 40px;
+	background-color: #3E454A;
+}
+
+.heroArticle {
+	height: 500px;
+	background-color: #4E7593;
+	margin-top: -90;
+}
