@@ -13,7 +13,6 @@ function headTracker()
 	//require("js/headtrackr.js");
 	var videoInput = document.getElementById('inputVideo');
 	var canvasInput = document.getElementById('inputCanvas');
-	var userLocation = "Medium";
 
 	// System status information
 	var statusMessages = 
@@ -21,8 +20,8 @@ function headTracker()
 		"whitebalance" : "Checking for stability of camera whitebalance...",
 		"detecting" : "Detecting face...",
 		"hints" : "Hmm. Detecting the face is taking a long time...",
-		"redetecting" : "Lost track of face. Redetecting...",
-		"lost" : "Lost track of face",
+		"redetecting" : "Still there? Redetecting...",
+		"lost" : "Are you still there? [F10] to redetect...",
 		"found" : "Tracking face..."
 	};
 			
@@ -34,7 +33,7 @@ function headTracker()
 	};
 			
 	//Setup and initialize face tracking
-	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}});
+	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}, ui: false});
 	facetracker.init(videoInput, canvasInput);
 	facetracker.start();
 			
@@ -43,14 +42,14 @@ function headTracker()
 	{
 		if (event.status in supportMessages)
 	 		console.log(supportMessages[event.status]);
-	 	else if (event.status === "redetecting" && currentState !=1)
+	 	else if ((event.status === "redetecting") || (event.status === "lost") && currentState != 1)
 	 	{
-	 		userLocation = "Far";
 	 		onFullMode();
-	 		console.log(statusMessages[event.status]);
 	 	}
-	 	else if (event.status in statusMessages)
-			console.log(statusMessages[event.status]);
+	 	else if (event.status === "detecting")
+	 	{
+			onBrowseMode();
+		}
 	}, true);
 			
 	//Listen for headtracker position change events		
@@ -60,7 +59,6 @@ function headTracker()
 
 		if (event.z < 75 - deadZone && currentState != 3)
 		{
-			userLocation = "Near";
 			onDetailMode();
 			//console.log("Near Reading"); // (" + event.z + "cm)";
 		}	 
@@ -71,17 +69,15 @@ function headTracker()
 			//console.log("Medium Reading"); // (" + event.z + "cm)";
 		} else if (event.z > 120 + deadZone  && currentState != 1)
 		{
-			userLocation = "Far";
 			onFullMode();
 			//console.log("Far Reading"); // (" + event.z + "cm)";
 		}	
 
 		console.log("Current position: " + event.z);	
-	
 	});
 	
 	
-}		
+}
 			
 function onFullMode(){
 	document.getElementById('body').className = "full";
