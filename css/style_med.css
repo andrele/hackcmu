@@ -144,3 +144,19 @@ article.activeArticle {
 }
 
 /* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE TO THE SCREEN */
+.detail .longText, .detail .rightColumn {
+	display:block;
+}
+
+.detail video {
+	display:none;
+}
+
+.detail article {
+	margin-top: 80px;
+}
+
+.detail .heading a {
+	color: #A7BBC9;
+	font-size: 1.5em;
+}
