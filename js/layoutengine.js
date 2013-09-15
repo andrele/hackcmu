@@ -9,6 +9,9 @@ function require(jsFilePath) {
 function headTracker()
 {
 	currentState = 0;
+	previousValue = 0;
+	seedValue = 75;
+	initialSeed = false;
 
 	//require("js/headtrackr.js");
 	var videoInput = document.getElementById('inputVideo');
@@ -38,7 +41,6 @@ function headTracker()
 	facetracker.start();
 			
 	//Listen for headtracker status events
-	var toast = '';
 	document.addEventListener("headtrackrStatus", function(event)
 	{
 		if (event.status in supportMessages)
@@ -53,29 +55,49 @@ function headTracker()
 		}
 
 	}, true);
+
+	$("body").keypress( function(e) {
+		if (e.keyCode == 32){
+			facetracker.stop();
+			facetracker.start();
+			console.log("restarting facetracker");
+		}	
+	});
 			
 	//Listen for headtracker position change events		
 	document.addEventListener("headtrackingEvent", function(event)
 	{
 		var deadZone = 10;
 
-		if (event.z < 75 - deadZone && currentState != 3)
+		if (!initialSeed)
+		{
+			seedValue = event.z;
+			initialSeed = true;
+		}
+
+		if (event.z < 0)
+		{
+			facetracker.stop();
+			facetracker.start();
+		}
+		if (event.z < seedValue - deadZone && currentState != 3)
 		{
 			onDetailMode();
 			//console.log("Near Reading"); // (" + event.z + "cm)";
 		}	 
-		else if (event.z >= 75 + deadZone && event.z <= 120 - deadZone && currentState != 2)
+		else if (event.z >= seedValue + deadZone && event.z <= seedValue + 50 - deadZone && currentState != 2)
 		{
 			userLocation = "Medium";
 				onBrowseMode();
 			//console.log("Medium Reading"); // (" + event.z + "cm)";
-		} else if (event.z > 120 + deadZone  && currentState != 1)
+		} else if (event.z > seedValue + 50 + deadZone  && currentState != 1)
 		{
 			onFullMode();
 			//console.log("Far Reading"); // (" + event.z + "cm)";
 		}	
 
-		console.log("Current position: " + event.z);	
+		console.log("Current position: " + event.z);
+		previousValue = event.z;	
 	});
 	
 	
@@ -87,6 +109,8 @@ function onFullMode(){
 	$(".video").removeClass("col-md-8");
 	currentState = 1;
 	window.scrollTo(0, 0);
+	document.getElementById('video1').play();
+
 }
 
 function onBrowseMode(){
@@ -95,6 +119,8 @@ function onBrowseMode(){
 	$(".video").addClass("col-md-8 clearRightCol");
 	currentState = 2;
 	window.scrollTo(0, 0);
+	document.getElementById('video1').play();
+
 }
 
 function onDetailMode(){
@@ -102,6 +128,11 @@ function onDetailMode(){
 	$(".heading").addClass("col-md-4");
 	currentState = 3;
 	window.scrollTo(0, 0);
+	document.getElementById('video1').pause();
+}
+
+function nextArticle(){
+	document.querySelector('.activeArticle').removeClass("activeArticle")
 }
 
 //Load headtracker code on startup

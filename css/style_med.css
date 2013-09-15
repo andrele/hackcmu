@@ -8,6 +8,11 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+#logotype {
+	font-size: 2em;
+	color: #FF9D00;
+}
+
 p {
 	color:white;
 }
