@@ -1,257 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Posture: Browse news feeds based your reading position</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
 
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Hackcmu : " />
 
-		<!-- Custom CSS -->
-		<link href="css/style_med.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-        <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <title>Hackcmu</title>
+  </head>
 
-	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!--[if lt IE 9]>
-	      <script src="../../assets/js/html5shiv.js"></script>
-	      <script src="../../assets/js/respond.min.js"></script>
-	    <![endif]-->
-	</head> 
-	<body id="body" class="browse">
-    <script src="js/headtrackr.js"></script>
+  <body>
 
-    <!--Outer container -->
-    	
-    <!--nav bar -->
-    <!--Browse/Detail view-->
-    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Loop</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">News</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-        
-    <div class="container">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/barathcj/hackcmu">View on GitHub</a>
 
-        
-        <!-- Article -->
-        <article id="article1" class="activeArticle">
-       
-        <!-- Browse view: heading video
-        	 Detail view: heading longText-->
-        	<div class="article">
-            
-	       		<!--Main heading - headline + author info + date -->
-    	    	<!--Full/Browse/Detail view:  -->
-	    	    <div class="heading col-md-4 clearLeftCol">
-    	    		<h1 class="headline">
-                        <a href="http://thenextweb.com/dd/2013/09/05/9-major-logo-redesigns/">
-                            9 major logo redesigns: Yahoo and beyond
-                        </a>
-                    </h1>
-                    <h3 class="date">September 5, 2013</h3>  
-	        	    <img class="authorThumb" src=""/>
-    	        	<h4 class="author">Emilie Futterman</h4>
-	 	       </div>
-            
-	        	<!--Video-->
-		        <!--Full/Browse view-->
-        	    <div class="video col-md-8 clearRightCol">
-    	    		<video src="content/video/yahoo.mp4" controls autoplay>
-        	    	</video>
-        		</div>
+          <h1 id="project_title">Hackcmu</h1>
+          <h2 id="project_tagline"></h2>
 
-                <div class="shortText">
-                    <p>Yahoo revealed its new logo at the conclusion of its 30 Days of Change campaign, which offered a new logo each day during the month of August. The new logo is meant to be “a modern redesign that’s more reflective of [Yahoo’s] reimagined design and new experiences.”</p>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/barathcj/hackcmu/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/barathcj/hackcmu/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-                </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hackcmu maintained by <a href="https://github.com/barathcj">barathcj</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
 
-	            <!--Main body text-->
-    	        <!--Detail View -->
-        	    <div class="longText">
-                    <p>
-                        What’s in a logo?
-
-                        Some instantly recognizable logos, such as Tide or Hershey’s, reassure consumers that they can trust the product they are buying; however other logos, such as BP or United Airlines, are often associated with poor company performance and PR disasters that can deter brand loyalty.
-
-                        Recently, we’ve seen a shift in popular design as branding moves beyond print and packaging to web and mobile. These new platforms are much more diverse in presentation than grocery store shelves, highway billboards, and 8.5 x 11 inch magazine pages, and therefore require brand design to be responsive and flexible.
-
-                        Many old logos have not adjusted well to these new mediums and sit awkwardly in app icons and mobile browsers, much like your grandmother’s Victorian-era chair would look in Ironman’s swanky modern digs. Instead of inspiring consumer loyalty, an old company logo gives becomes passé, unaware of change, and out of place in our increasingly technology-centric society.
-
-                        However, with change often comes backlash, especially if the reasons are unclear. Many logo redesigns receive mixed or even unfavorable reactions from the public, and sometimes it’s so extreme that they are pulled just after launch. Gap and Tropicana are two such examples – both companies received so many negative reactions to an attempted rebrand that they reverted back to old logos in a matter of days.
-
-                        Since a new logo is sometimes necessary for a company to move forward, how can it successfully strike a balance between loyalty and innovation? The answer is in the public eye. And while the public is notoriously fickle about change, Yahoo may have the answer.
-
-                        Yahoo’s ’30 Days’ campaign introduced the idea slowly to the masses, allowing them to get used to the idea that one of the most iconic ‘90s dot-com era logos is changing. And while the campaign was likely a combination of a field test and a marketing gimmick, we’d be surprised if Yahoo ignored 30 days of free public feedback when making a final decision. All the logos can be found on the Yahoo website.
-
-                        Yahoo
-
-                        The brand new Yahoo! logo was introduced with a video that exhibits Yahoo!’s new youthful identity. The soundtrack is a fairly popular pop song, one that many of Yahoo’s young Tumblr users will recognize. The new logo displays the same breaching of two worlds, the old Yahoo!and the new, youthful and hip Yahoo.
-
-                        The logo has many of the same stylistic characteristics found in the old logo – the large “Y,” the differently shaped “O”s, and the angled exclamation point have all remained. But the font is slimmer, neater, and 3-dimensional, and the purple is deeper and more authoritative. Like eBay before it, Yahoo stuck closely to its original logo, tweaking the style only slightly. Marissa Meyer’s Yahoo! is clearly a new Yahoo!, but the core brand is clearly still very much alive.
-                    </p>
-            	</div>
-            
-            
-            </div>  <!--end article main --> 
-            
-            
-            
-            <!--Short text -->
-        	<!--Browse view -->
-
-            
-            
-            <!--Right column - images -->
-            <!--Detail view-->
-            <div class="rightColumn">
-            </div>
-            
-        
-            </article>
-
-                    <!-- Article -->
-            <article id="article2">
-           
-            <!-- Browse view: heading video
-                 Detail view: heading longText-->
-                <div class="article">
-                
-                    <!--Main heading - headline + author info + date -->
-                    <!--Full/Browse/Detail view:  -->
-                    <div class="heading col-md-4">
-                        <h1 class="headline">Heading</h1>
-                        <img class="authorThumb" src=""/>
-                        <h2 class="author">Author name</h2>
-                        <h3 class="date">12/12/2013</h3>  
-                   </div>
-                
-                    <!--Video-->
-                    <!--Full/Browse view-->
-                    <div class="video col-md-8">
-                        <video src="">
-                        </video>
-                    </div>
-            
-                    <!--Main body text-->
-                    <!--Detail View -->
-                    <div class="longText">
-                    </div>
-                
-                
-                </div>  <!--end article main --> 
-                
-                
-                
-                <!--Short text -->
-                <!--Browse view -->
-                <div class="shortText">
-                </div>
-                
-                
-                <!--Right column - images -->
-                <!--Detail view-->
-                <div class="rightColumn">
-                </div>
-                
-            
-            </article>
-
-                    <!-- Article -->
-            <article id="article3">
-           
-            <!-- Browse view: heading video
-                 Detail view: heading longText-->
-                <div class="article">
-                
-                    <!--Main heading - headline + author info + date -->
-                    <!--Full/Browse/Detail view:  -->
-                    <div class="heading col-md-4">
-                        <h1 class="headline">Heading</h1>
-                        <img class="authorThumb" src=""/>
-                        <h2 class="author">Author name</h2>
-                        <h3 class="date">12/12/2013</h3>  
-                   </div>
-                
-                    <!--Video-->
-                    <!--Full/Browse view-->
-                    <div class="video col-md-8">
-                        <video src="">
-                        </video>
-                    </div>
-            
-                    <!--Main body text-->
-                    <!--Detail View -->
-                    <div class="longText">
-                    </div>
-                
-                
-                </div>  <!--end article main --> 
-                
-                
-                
-                <!--Short text -->
-                <!--Browse view -->
-                <div class="shortText">
-                </div>
-                
-                
-                <!--Right column - images -->
-                <!--Detail view-->
-                <div class="rightColumn">
-                </div>
-                
-            
-            </article>
-            
-            <!-- container for previous and next video buttons -->
-            <!--Browse view-->
-            <div id="articleNav">
-            
-            	<!--Previous button -->
-                <div class="col-md-6 clearLeftCol">
-                	<div id="previousButton" class="btn">
-                        <p class="previousHeading">A Day With Glass: First Impressions Of The Early Days Of Google’s Latest Moonshot </p>
-                        <span class="glyphicon glyphicon-chevron-left"></span> 
-                    </div>
-                </div>
-
-                <!--Next button -->
-                <div class="col-md-6 clearRightCol">
-                    <div id="nextButton" class="btn">
-                        <p class="nextHeading">A Day With Glass: First Impressions Of The Early Days Of Google’s Latest Moonshot </p>
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </div>    
-                </div>
-                
-            </div>
-            <!--end prevNext-->
-                    
-    </div>
-        
-        <canvas id="inputCanvas" width="320" height="240" style="display:none" hidden></canvas>
-        <video id="inputVideo" autoplay loop hidden></video>
-             
-        
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="js/jquery.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="js/bootstrap.min.js"></script>
-        <script src="js/layoutengine.js"></script>
-	</body>
+  </body>
 </html>
