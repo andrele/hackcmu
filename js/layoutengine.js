@@ -36,26 +36,27 @@ function headTracker()
 	facetracker.start();
 			
 	//Listen for headtracker status events
+	var toast = '';
 	document.addEventListener("headtrackrStatus", function(event)
 	{
 		if (event.status in supportMessages)
-	 		toastr.info(supportMessages[event.status]);
+			toast = new Android_Toast({content: supportMessages[event.status]});
 	 	else if ((event.status === "redetecting") || (event.status === "lost"))
 	 	{
 	 		onFullMode();
-	 		toastr.info(statusMessages[event.status]);
+	 		toast = new Android_Toast({content: statusMessages[event.status]});
 	 	}
 	 	else if (event.status === "detecting")
 	 	{
 	 		onBrowseMode();
-	 		toastr.info(statusMessages[event.status]);
+	 		toast = new Android_Toast({content: statusMessages[event.status]});
 	 	}
 	}, true);
 			
 	//Listen for headtracker position change events		
 	document.addEventListener("headtrackingEvent", function(event)
 	{
-		if (event.z < 50)
+		if (event.z < 60)
 		{
 			onDetailMode();
 			//console.log("Near Reading"); // (" + event.z + "cm)";
