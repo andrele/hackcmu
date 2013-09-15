@@ -38,6 +38,7 @@ function headTracker()
 	facetracker.start();
 			
 	//Listen for headtracker status events
+	var toast = '';
 	document.addEventListener("headtrackrStatus", function(event)
 	{
 		if (event.status in supportMessages)
@@ -50,6 +51,7 @@ function headTracker()
 	 	{
 			onBrowseMode();
 		}
+
 	}, true);
 			
 	//Listen for headtracker position change events		
