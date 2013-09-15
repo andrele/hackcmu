@@ -23,9 +23,23 @@ p {
 	-webkit-transition: all 1s;
 }
 
+.heroImage {
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	overflow: hidden;
+}
+
 /* HIDE SHIT FROM FULL SCREEN MODE */
-.full .longText, .full .shortText, .full .rightColumn, .full .navbar, .full #articleNav {
+.full .longText, .full .shortText, .full .rightColumn, .full .navbar, .full #articleNav{
 	display:none;
+}
+
+.full .heroImage, .browse .heroImage {
+	height: 0px;
+}
+
+.detail .article .heroImage {
+	height: 422px;
 }
 
 body.full {
@@ -153,7 +167,13 @@ article.activeArticle {
 }
 
 .detail .longText {
+	padding-top: 1.5em;
 	font-size: 1.5em;
+}
+
+.detail .longText p{
+	-webkit-column-count:2;
+	column-count:2;
 }
 
 .detail article {

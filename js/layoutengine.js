@@ -8,6 +8,8 @@ function require(jsFilePath) {
 
 function headTracker()
 {
+	currentState = 0;
+
 	//require("js/headtrackr.js");
 	var videoInput = document.getElementById('inputVideo');
 	var canvasInput = document.getElementById('inputCanvas');
@@ -41,9 +43,10 @@ function headTracker()
 	{
 		if (event.status in supportMessages)
 	 		console.log(supportMessages[event.status]);
-	 	else if (event.status === "redetecting")
+	 	else if (event.status === "redetecting" && currentState !=1)
 	 	{
 	 		userLocation = "Far";
+	 		onFullMode();
 	 		console.log(statusMessages[event.status]);
 	 	}
 	 	else if (event.status in statusMessages)
@@ -53,24 +56,25 @@ function headTracker()
 	//Listen for headtracker position change events		
 	document.addEventListener("headtrackingEvent", function(event)
 	{
-		if (event.z < 75)
+		var deadZone = 10;
+
+		if (event.z < 75 - deadZone && currentState != 3)
 		{
 			userLocation = "Near";
 			onDetailMode();
 			//console.log("Near Reading"); // (" + event.z + "cm)";
-		}	
-		else if (event.z > 140)
+		}	 
+		else if (event.z >= 75 + deadZone && event.z <= 120 - deadZone && currentState != 2)
+		{
+			userLocation = "Medium";
+				onBrowseMode();
+			//console.log("Medium Reading"); // (" + event.z + "cm)";
+		} else if (event.z > 120 + deadZone  && currentState != 1)
 		{
 			userLocation = "Far";
 			onFullMode();
 			//console.log("Far Reading"); // (" + event.z + "cm)";
 		}	
-		else
-		{
-			userLocation = "Medium";
-			onBrowseMode();
-			//console.log("Medium Reading"); // (" + event.z + "cm)";
-		}
 
 		console.log("Current position: " + event.z);	
 	
@@ -83,22 +87,24 @@ function onFullMode(){
 	document.getElementById('body').className = "full";
 	$(".heading").removeClass("col-md-4");
 	$(".video").removeClass("col-md-8");
+	currentState = 1;
+	window.scrollTo(0, 0);
 }
 
 function onBrowseMode(){
 	document.getElementById('body').className = "browse";
 	$(".heading").addClass("col-md-4 clearLeftCol");
 	$(".video").addClass("col-md-8 clearRightCol");
+	currentState = 2;
+	window.scrollTo(0, 0);
 }
 
 function onDetailMode(){
 	document.getElementById('body').className = "detail";
-	$(".heading").removeClass("col-md-4 clearLeftCol");
-	$(".heading").addClass("col-md-8 clearLeftCol");
-
-
-
+	$(".heading").addClass("col-md-4");
+	currentState = 3;
+	window.scrollTo(0, 0);
 }
 
 //Load headtracker code on startup
-//window.onload = headTracker;
+window.onload = headTracker;
