@@ -4,10 +4,29 @@ body {
 	padding-bottom: 40px;
 	background-color: #3E454A;
 	color:white;
+
+	font-family: 'Lato', sans-serif;
 }
 
 p {
 	color:white;
+}
+
+.author {
+	font-size: 10pt;
+}
+
+.shortText p{
+	float: left;	
+	font-size: 2em;
+	font-weight: 300;
+}
+
+
+/* SET CSS TRANSITIONS */
+.browse .heading, .detail .heading {
+	transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 /* HIDE SHIT FROM FULL SCREEN MODE */
@@ -27,10 +46,10 @@ body.full {
 	left:0;
 }  
 
-.full .shortText, .full .heading {
+.full .heading {
 	position: absolute;
 	top: 10px;
-	left: 75px;
+	left: 100px;
 	z-index: 1000;
 }
 
@@ -44,6 +63,19 @@ article.activeArticle {
 
 
 /* SHIT TO DO FOR MEDIUM RANGE */
+.browse .longText, .browse .rightColumn {
+	display:none;
+}
+
+.browse video {
+	position: relative;
+	width: 100%;
+
+}
+
+.browse article {
+	margin-top: 80px;
+}
 
 
 /* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE */

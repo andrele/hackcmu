@@ -10,7 +10,7 @@
 		<!-- Custom CSS -->
 		<link href="css/style_med.css" rel="stylesheet" media="screen">
 
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
 	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!--[if lt IE 9]>
@@ -18,33 +18,34 @@
 	      <script src="../../assets/js/respond.min.js"></script>
 	    <![endif]-->
 	</head> 
-	<body class="med">
+	<body id="body" class="browse">
     
     <!--Outer container -->
-    <div id="container">
     	
-        <!--nav bar -->
-        <!--Browse/Detail view-->
-        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Loop</a>
-            </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">News</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div><!-- /.nav-collapse -->
-          </div><!-- /.container -->
-        </div><!-- /.navbar -->
+    <!--nav bar -->
+    <!--Browse/Detail view-->
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Loop</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">News</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
         
+    <div class="container">
+
         
         <!-- Article -->
         <article id="article1" class="activeArticle">
@@ -55,7 +56,7 @@
             
 	       		<!--Main heading - headline + author info + date -->
     	    	<!--Full/Browse/Detail view:  -->
-	    	    <div class="heading">
+	    	    <div class="heading col-md-4">
     	    		<h1 class="headline">
                         <a href="http://thenextweb.com/dd/2013/09/05/9-major-logo-redesigns/">
                             9 major logo redesigns: Yahoo and beyond
@@ -68,11 +69,17 @@
             
 	        	<!--Video-->
 		        <!--Full/Browse view-->
-        	    <div class="video">
+        	    <div class="video col-md-8">
     	    		<video src="content/video/yahoo.mp4" controls>
         	    	</video>
         		</div>
-        
+
+                <div class="shortText">
+                    <p>Yahoo revealed its new logo at the conclusion of its 30 Days of Change campaign, which offered a new logo each day during the month of August. The new logo is meant to be “a modern redesign that’s more reflective of [Yahoo’s] reimagined design and new experiences.”</p>
+
+                </div>
+    
+
 	            <!--Main body text-->
     	        <!--Detail View -->
         	    <div class="longText">
@@ -106,9 +113,7 @@
             
             <!--Short text -->
         	<!--Browse view -->
-            <div class="shortText">
-                <p>Yahoo revealed its new logo at the conclusion of its 30 Days of Change campaign, which offered a new logo each day during the month of August. The new logo is meant to be “a modern redesign that’s more reflective of [Yahoo’s] reimagined design and new experiences.”</p>
-        	</div>
+
             
             
             <!--Right column - images -->
@@ -128,7 +133,7 @@
             
                 <!--Main heading - headline + author info + date -->
                 <!--Full/Browse/Detail view:  -->
-                <div class="heading">
+                <div class="heading col-md-4">
                     <h1 class="headline">Heading</h1>
                     <img class="authorThumb" src=""/>
                     <h2 class="author">Author name</h2>
@@ -137,7 +142,7 @@
             
                 <!--Video-->
                 <!--Full/Browse view-->
-                <div class="video">
+                <div class="video col-md-8">
                     <video src="">
                     </video>
                 </div>
@@ -175,7 +180,7 @@
             
                 <!--Main heading - headline + author info + date -->
                 <!--Full/Browse/Detail view:  -->
-                <div class="heading">
+                <div class="heading col-md-4">
                     <h1 class="headline">Heading</h1>
                     <img class="authorThumb" src=""/>
                     <h2 class="author">Author name</h2>
@@ -184,7 +189,7 @@
             
                 <!--Video-->
                 <!--Full/Browse view-->
-                <div class="video">
+                <div class="video col-md-8">
                     <video src="">
                     </video>
                 </div>
@@ -249,5 +254,6 @@
 	    <script src="js/jquery.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="js/bootstrap.min.js"></script>
+        <script src="js/layoutengine.js"></script>
 	</body>
 </html>
