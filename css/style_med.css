@@ -105,11 +105,26 @@ article.activeArticle {
 	margin: 0px;
 	margin-top: 1em;
 	padding: 1.5em 2em;
-	width: 100%;
+	width: 100%;;
 }
 
-.browse #articleNav span.glyphicon{
-	font-size: 3em;
+.browse #articleNav span.leftArrow{
+	width: 21px;
+	height: 50px;
+	background-size: 21px 50px;
+	background-image: url('../img/left-arrow.png');
+	float:left;
+	margin-top: 9px;
+
+}
+
+.browse #articleNav span.rightArrow{
+	width: 21px;
+	height: 50px;
+	background-size: 21px 50px;
+	background-image: url('../img/right-arrow.png');
+	float:right;
+	margin-top: 9px;
 }
 
 
@@ -118,8 +133,6 @@ article.activeArticle {
 	white-space: normal;
 	width: 85%;
 	text-align: left;
-
-
 }
 
 .browse #articleNav .nextHeading {
@@ -131,3 +144,19 @@ article.activeArticle {
 }
 
 /* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE TO THE SCREEN */
+.detail .longText, .detail .rightColumn {
+	display:block;
+}
+
+.detail video {
+	display:none;
+}
+
+.detail article {
+	margin-top: 80px;
+}
+
+.detail .heading a {
+	color: #A7BBC9;
+	font-size: 1.5em;
+}

@@ -32,7 +32,7 @@ function headTracker()
 	};
 			
 	//Setup and initialize face tracking
-	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}, ui: false});
+	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}});
 	facetracker.init(videoInput, canvasInput);
 	facetracker.start();
 			
@@ -57,19 +57,19 @@ function headTracker()
 		{
 			userLocation = "Near";
 			onDetailMode();
-			console.log("Near Reading"); // (" + event.z + "cm)";
+			//console.log("Near Reading"); // (" + event.z + "cm)";
 		}	
 		else if (event.z > 140)
 		{
 			userLocation = "Far";
 			onFullMode();
-			console.log("Far Reading"); // (" + event.z + "cm)";
+			//console.log("Far Reading"); // (" + event.z + "cm)";
 		}	
 		else
 		{
 			userLocation = "Medium";
 			onBrowseMode();
-			console.log("Medium Reading"); // (" + event.z + "cm)";
+			//console.log("Medium Reading"); // (" + event.z + "cm)";
 		}	
 	
 	});

@@ -89,6 +89,7 @@ if (typeof navigator.getUserMedia === "function") {
             for (var i = 0; i < faces.length; i++) {
                 var face = faces[i];
                 context.fillRect(face.x, face.y, face.width, face.height);
+                context.fillText(face.width, 100, 100);
             }
         }
 
