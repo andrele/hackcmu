@@ -70,12 +70,17 @@ article.activeArticle {
 .browse video {
 	position: relative;
 	width: 100%;
-
 }
 
 .browse article {
 	margin-top: 80px;
 }
 
+.browse .heading a {
+	color: #A7BBC9;
+	font-size: 1.5em;
+}
 
-/* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE */
+
+
+/* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE TO THE SCREEN */
