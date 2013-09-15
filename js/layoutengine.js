@@ -44,6 +44,7 @@ function headTracker()
 	 	else if (event.status === "redetecting")
 	 	{
 	 		userLocation = "Far";
+	 		onFullMode();
 	 		console.log(statusMessages[event.status]);
 	 	}
 	 	else if (event.status in statusMessages)
