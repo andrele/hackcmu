@@ -70,7 +70,9 @@ function headTracker()
 			userLocation = "Medium";
 			onBrowseMode();
 			//console.log("Medium Reading"); // (" + event.z + "cm)";
-		}	
+		}
+
+		console.log("Current position: " + event.z);	
 	
 	});
 	
@@ -91,8 +93,12 @@ function onBrowseMode(){
 
 function onDetailMode(){
 	document.getElementById('body').className = "detail";
+	$(".heading").removeClass("col-md-4 clearLeftCol");
+	$(".heading").addClass("col-md-8 clearLeftCol");
+
+
 
 }
 
 //Load headtracker code on startup
-window.onload = headTracker;
+//window.onload = headTracker;

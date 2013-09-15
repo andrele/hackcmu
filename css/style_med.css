@@ -144,12 +144,16 @@ article.activeArticle {
 }
 
 /* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE TO THE SCREEN */
+.detail .shortText, .detail video {
+	display:none;
+}
+
 .detail .longText, .detail .rightColumn {
 	display:block;
 }
 
-.detail video {
-	display:none;
+.detail .longText {
+	font-size: 1.5em;
 }
 
 .detail article {
@@ -159,4 +163,51 @@ article.activeArticle {
 .detail .heading a {
 	color: #A7BBC9;
 	font-size: 1.5em;
+}
+
+.detail #articleNav {
+	display:block;
+	text-align: center;
+}
+
+.detail #previousButton, .detail #nextButton {
+	background-color: #6BA0C8;
+	margin: 0px;
+	margin-top: 1em;
+	padding: 1.5em 2em;
+	width: 100%;;
+}
+
+.detail #articleNav span.leftArrow{
+	width: 21px;
+	height: 50px;
+	background-size: 21px 50px;
+	background-image: url('../img/left-arrow.png');
+	float:left;
+	margin-top: 9px;
+
+}
+
+.detail #articleNav span.rightArrow{
+	width: 21px;
+	height: 50px;
+	background-size: 21px 50px;
+	background-image: url('../img/right-arrow.png');
+	float:right;
+	margin-top: 9px;
+}
+
+.detail #articleNav .nextHeading, .detail #articleNav .previousHeading{
+	font-size: 1.5em;
+	white-space: normal;
+	width: 85%;
+	text-align: left;
+}
+
+.detail #articleNav .nextHeading {
+	float: left;
+}
+
+.detail #articleNav .previousHeading {
+	float: right;
 }
