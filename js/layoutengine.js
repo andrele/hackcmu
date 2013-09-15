@@ -32,7 +32,7 @@ function headTracker()
 	};
 			
 	//Setup and initialize face tracking
-	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}});
+	var facetracker = new headtrackr.Tracker({altVideo : {ogv : "./video/sampleogg.ogv", mp4 : "./video/samplemp4.mp4"}, ui: false});
 	facetracker.init(videoInput, canvasInput);
 	facetracker.start();
 			
@@ -101,4 +101,4 @@ function onDetailMode(){
 }
 
 //Load headtracker code on startup
-//window.onload = headTracker;
+window.onload = headTracker;
