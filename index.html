@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<title>Posture: Browse news feeds based your reading position</title>
-		<meta name="viewport" content="width=device-width, inital-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -10,49 +10,93 @@
 		<!-- Custom CSS -->
 		<link href="css/style_med.css" rel="stylesheet" media="screen">
 
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
 	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	    <!--[if lt IE 9]>
 	      <script src="../../assets/js/html5shiv.js"></script>
 	      <script src="../../assets/js/respond.min.js"></script>
 	    <![endif]-->
 	</head> 
-	<body>
+	<body class="med">
     
     <!--Outer container -->
     <div id="container">
     	
         <!--nav bar -->
         <!--Browse/Detail view-->
-        <div id="nav">
-        </div>
+        <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Loop</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">News</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!-- /.nav-collapse -->
+          </div><!-- /.container -->
+        </div><!-- /.navbar -->
         
         
         <!-- Article -->
-        <article>
+        <article id="article1" class="activeArticle">
        
         <!-- Browse view: heading video
         	 Detail view: heading longText-->
-        	<div id="articleMain">
+        	<div class="article">
             
 	       		<!--Main heading - headline + author info + date -->
     	    	<!--Full/Browse/Detail view:  -->
-	    	    <div id="heading">
-    	    		<h1 id="headline">Heading</h1>
-	        	    <img id="authorThumb" src=""/>
-    	        	<h2 id="author">Author name</h2>
-  					<h3 id="date">12/12/2013</h3>  
+	    	    <div class="heading">
+    	    		<h1 class="headline">
+                        <a href="http://thenextweb.com/dd/2013/09/05/9-major-logo-redesigns/">
+                            9 major logo redesigns: Yahoo and beyond
+                        </a>
+                    </h1>
+	        	    <img class="authorThumb" src=""/>
+    	        	<h2 class="author">Emilie Futterman</h2>
+  					<h3 class="date">09/05/13</h3>  
 	 	       </div>
             
 	        	<!--Video-->
 		        <!--Full/Browse view-->
-        	    <div id="video">
-    	    		<video src="">
+        	    <div class="video">
+    	    		<video src="content/video/yahoo.mp4" controls>
         	    	</video>
         		</div>
         
 	            <!--Main body text-->
     	        <!--Detail View -->
-        	    <div id="longText">
+        	    <div class="longText">
+                    <p>
+                        What’s in a logo?
+
+                        Some instantly recognizable logos, such as Tide or Hershey’s, reassure consumers that they can trust the product they are buying; however other logos, such as BP or United Airlines, are often associated with poor company performance and PR disasters that can deter brand loyalty.
+
+                        Recently, we’ve seen a shift in popular design as branding moves beyond print and packaging to web and mobile. These new platforms are much more diverse in presentation than grocery store shelves, highway billboards, and 8.5 x 11 inch magazine pages, and therefore require brand design to be responsive and flexible.
+
+                        Many old logos have not adjusted well to these new mediums and sit awkwardly in app icons and mobile browsers, much like your grandmother’s Victorian-era chair would look in Ironman’s swanky modern digs. Instead of inspiring consumer loyalty, an old company logo gives becomes passé, unaware of change, and out of place in our increasingly technology-centric society.
+
+                        However, with change often comes backlash, especially if the reasons are unclear. Many logo redesigns receive mixed or even unfavorable reactions from the public, and sometimes it’s so extreme that they are pulled just after launch. Gap and Tropicana are two such examples – both companies received so many negative reactions to an attempted rebrand that they reverted back to old logos in a matter of days.
+
+                        Since a new logo is sometimes necessary for a company to move forward, how can it successfully strike a balance between loyalty and innovation? The answer is in the public eye. And while the public is notoriously fickle about change, Yahoo may have the answer.
+
+                        Yahoo’s ’30 Days’ campaign introduced the idea slowly to the masses, allowing them to get used to the idea that one of the most iconic ‘90s dot-com era logos is changing. And while the campaign was likely a combination of a field test and a marketing gimmick, we’d be surprised if Yahoo ignored 30 days of free public feedback when making a final decision. All the logos can be found on the Yahoo website.
+
+                        Yahoo
+
+                        The brand new Yahoo! logo was introduced with a video that exhibits Yahoo!’s new youthful identity. The soundtrack is a fairly popular pop song, one that many of Yahoo’s young Tumblr users will recognize. The new logo displays the same breaching of two worlds, the old Yahoo!and the new, youthful and hip Yahoo.
+
+                        The logo has many of the same stylistic characteristics found in the old logo – the large “Y,” the differently shaped “O”s, and the angled exclamation point have all remained. But the font is slimmer, neater, and 3-dimensional, and the purple is deeper and more authoritative. Like eBay before it, Yahoo stuck closely to its original logo, tweaking the style only slightly. Marissa Meyer’s Yahoo! is clearly a new Yahoo!, but the core brand is clearly still very much alive.
+                    </p>
             	</div>
             
             
@@ -62,23 +106,116 @@
             
             <!--Short text -->
         	<!--Browse view -->
-            <div id="shortText">
+            <div class="shortText">
+                <p>Yahoo revealed its new logo at the conclusion of its 30 Days of Change campaign, which offered a new logo each day during the month of August. The new logo is meant to be “a modern redesign that’s more reflective of [Yahoo’s] reimagined design and new experiences.”</p>
         	</div>
             
             
             <!--Right column - images -->
             <!--Detail view-->
-            <div id="rightColumn">
+            <div class="rightColumn">
+            </div>
+            
+        
+        </article>
+
+                <!-- Article -->
+        <article id="article2">
+       
+        <!-- Browse view: heading video
+             Detail view: heading longText-->
+            <div class="article">
+            
+                <!--Main heading - headline + author info + date -->
+                <!--Full/Browse/Detail view:  -->
+                <div class="heading">
+                    <h1 class="headline">Heading</h1>
+                    <img class="authorThumb" src=""/>
+                    <h2 class="author">Author name</h2>
+                    <h3 class="date">12/12/2013</h3>  
+               </div>
+            
+                <!--Video-->
+                <!--Full/Browse view-->
+                <div class="video">
+                    <video src="">
+                    </video>
+                </div>
+        
+                <!--Main body text-->
+                <!--Detail View -->
+                <div class="longText">
+                </div>
+            
+            
+            </div>  <!--end article main --> 
+            
+            
+            
+            <!--Short text -->
+            <!--Browse view -->
+            <div class="shortText">
+            </div>
+            
+            
+            <!--Right column - images -->
+            <!--Detail view-->
+            <div class="rightColumn">
+            </div>
+            
+        
+        </article>
+
+                <!-- Article -->
+        <article id="article3">
+       
+        <!-- Browse view: heading video
+             Detail view: heading longText-->
+            <div class="article">
+            
+                <!--Main heading - headline + author info + date -->
+                <!--Full/Browse/Detail view:  -->
+                <div class="heading">
+                    <h1 class="headline">Heading</h1>
+                    <img class="authorThumb" src=""/>
+                    <h2 class="author">Author name</h2>
+                    <h3 class="date">12/12/2013</h3>  
+               </div>
+            
+                <!--Video-->
+                <!--Full/Browse view-->
+                <div class="video">
+                    <video src="">
+                    </video>
+                </div>
+        
+                <!--Main body text-->
+                <!--Detail View -->
+                <div class="longText">
+                </div>
+            
+            
+            </div>  <!--end article main --> 
+            
+            
+            
+            <!--Short text -->
+            <!--Browse view -->
+            <div class="shortText">
+            </div>
+            
+            
+            <!--Right column - images -->
+            <!--Detail view-->
+            <div class="rightColumn">
             </div>
             
         
         </article>
         
-        
-        
         <!-- container for previous and next video buttons -->
         <!--Browse view-->
-        <div id="prevNext">
+        <div id="articleNav">
         
         	<!--Previous button -->
         	<div id="previous">
@@ -91,7 +228,7 @@
             
             
             <!--Next button -->
-            <div id="next">
+            <div id="nextButton">
             	<img id="nextThumb" />
                	<div id="nextText" />
                 </div>
@@ -109,7 +246,7 @@
 
 
 	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="//code.jquery.com/jquery.js"></script>
+	    <script src="js/jquery.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="js/bootstrap.min.js"></script>
 	</body>

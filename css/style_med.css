@@ -3,10 +3,47 @@
 body {
 	padding-bottom: 40px;
 	background-color: #3E454A;
+	color:white;
 }
 
-.heroArticle {
-	height: 500px;
-	background-color: #4E7593;
-	margin-top: -90;
+p {
+	color:white;
 }
+
+/* HIDE SHIT FROM FULL SCREEN MODE */
+.full .longText, .full .articleNav, .full .shortText, .full .rightColumn, .full .navbar, .full #nav{
+	display:none;
+}
+
+body.full {
+	background-color: black;
+}
+
+.full video {
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+}  
+
+.full .shortText, .full .heading {
+	position: absolute;
+	top: 10px;
+	left: 75px;
+	z-index: 1000;
+}
+
+article {
+	display:none;
+}
+
+article.activeArticle {
+	display:block;
+}
+
+
+/* SHIT TO DO FOR MEDIUM RANGE */
+
+
+/* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE */
