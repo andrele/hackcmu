@@ -85,8 +85,8 @@ function onFullMode(){
 
 function onBrowseMode(){
 	document.getElementById('body').className = "browse";
-	$(".heading").addClass("col-md-4");
-	$(".video").addClass("col-md-8");
+	$(".heading").addClass("col-md-4 clearLeftCol");
+	$(".video").addClass("col-md-8 clearRightCol");
 }
 
 function onDetailMode(){

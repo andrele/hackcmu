@@ -16,12 +16,6 @@ p {
 	font-size: 10pt;
 }
 
-.shortText p{
-	float: left;	
-	font-size: 2em;
-	font-weight: 300;
-}
-
 
 /* SET CSS TRANSITIONS */
 .browse .heading, .detail .heading {
@@ -30,7 +24,7 @@ p {
 }
 
 /* HIDE SHIT FROM FULL SCREEN MODE */
-.full .longText, .full .articleNav, .full .shortText, .full .rightColumn, .full .navbar, .full #nav{
+.full .longText, .full .shortText, .full .rightColumn, .full .navbar, .full #articleNav {
 	display:none;
 }
 
@@ -63,6 +57,22 @@ article.activeArticle {
 
 
 /* SHIT TO DO FOR MEDIUM RANGE */
+
+.clearRightCol {
+	padding-right:0px;
+}
+
+.clearLeftCol {
+	padding-left: 0px;
+}
+
+.shortText p{
+	float: left;	
+	font-size: 2em;
+	font-weight: 300;
+	margin-top: 0.75em;
+}
+
 .browse .longText, .browse .rightColumn {
 	display:none;
 }
@@ -76,11 +86,48 @@ article.activeArticle {
 	margin-top: 80px;
 }
 
+.browse h1 {
+	margin-top:0px;
+}
+
 .browse .heading a {
 	color: #A7BBC9;
 	font-size: 1.5em;
 }
 
+.browse #articleNav {
+	display:block;
+	text-align: center;
+}
 
+.browse #previousButton, .browse #nextButton {
+	background-color: #6BA0C8;
+	margin: 0px;
+	margin-top: 1em;
+	padding: 1.5em 2em;
+	width: 100%;
+}
+
+.browse #articleNav span.glyphicon{
+	font-size: 3em;
+}
+
+
+.browse #articleNav .nextHeading, .browse #articleNav .previousHeading{
+	font-size: 1.5em;
+	white-space: normal;
+	width: 85%;
+	text-align: left;
+
+
+}
+
+.browse #articleNav .nextHeading {
+	float: left;
+}
+
+.browse #articleNav .previousHeading {
+	float: right;
+}
 
 /* SHIT TO DO WHEN YOURE REALLY FUCKING CLOSE TO THE SCREEN */
