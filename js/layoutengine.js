@@ -11,7 +11,6 @@ function headTracker()
 	//require("js/headtrackr.js");
 	var videoInput = document.getElementById('inputVideo');
 	var canvasInput = document.getElementById('inputCanvas');
-	var userLocation = "Medium";
 
 	// System status information
 	var statusMessages = 
@@ -19,8 +18,8 @@ function headTracker()
 		"whitebalance" : "Checking for stability of camera whitebalance...",
 		"detecting" : "Detecting face...",
 		"hints" : "Hmm. Detecting the face is taking a long time...",
-		"redetecting" : "Lost track of face. Redetecting...",
-		"lost" : "Lost track of face",
+		"redetecting" : "Still there? Redetecting...",
+		"lost" : "Are you still there? [F10] to redetect...",
 		"found" : "Tracking face..."
 	};
 			
@@ -40,41 +39,37 @@ function headTracker()
 	document.addEventListener("headtrackrStatus", function(event)
 	{
 		if (event.status in supportMessages)
-	 		console.log(supportMessages[event.status]);
-	 	else if (event.status === "redetecting")
+	 		toastr.info(supportMessages[event.status]);
+	 	else if ((event.status === "redetecting") || (event.status === "lost"))
 	 	{
-	 		userLocation = "Far";
 	 		onFullMode();
-	 		console.log(statusMessages[event.status]);
+	 		toastr.info(statusMessages[event.status]);
 	 	}
-	 	else if (event.status in statusMessages)
-			console.log(statusMessages[event.status]);
+	 	else if (event.status === "detecting")
+	 	{
+	 		onBrowseMode();
+	 		toastr.info(statusMessages[event.status]);
+	 	}
 	}, true);
 			
 	//Listen for headtracker position change events		
 	document.addEventListener("headtrackingEvent", function(event)
 	{
-		if (event.z < 75)
+		if (event.z < 50)
 		{
-			userLocation = "Near";
 			onDetailMode();
 			//console.log("Near Reading"); // (" + event.z + "cm)";
 		}	
-		else if (event.z > 140)
+		else if (event.z > 100)
 		{
-			userLocation = "Far";
 			onFullMode();
 			//console.log("Far Reading"); // (" + event.z + "cm)";
 		}	
 		else
 		{
-			userLocation = "Medium";
 			onBrowseMode();
 			//console.log("Medium Reading"); // (" + event.z + "cm)";
 		}
-
-		console.log("Current position: " + event.z);	
-	
 	});
 	
 	
